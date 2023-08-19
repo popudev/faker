@@ -1,0 +1,55 @@
+{
+  "name": "schat-chaincode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "build": "tsc"
+  },
+  "engineStrict": true,
+  "author": "Hyperledger",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "class-transformer": "0.5.1",
+    "class-validator": "0.14.0",
+    "ipfs-http-client": "56.0.2",
+    "module-alias": "^2.2.3",
+    "nano": "^10.1.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@types/node": "^10.12.10",
+    "ts-node": "^7.0.1",
+    "tslint": "^4.5.1",
+    "typescript": "^4.7.4"
+  },
+  "_moduleAliases": {
+    "@common": "dist/common",
+    "@records": "dist/records",
+    "@contracts": "dist/contracts",
+    "@dtos": "dist/dtos",
+    "@utils": "dist/utils",
+    "@types": "dist/types"
+  },
+  "nyc": {
+    "exclude": [
+      "coverage/**",
+      "test/**",
+      "index.js",
+      ".eslintrc.js"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "all": true,
+    "check-coverage": true,
+    "statements": 100,
+    "branches": 100,
+    "functions": 100,
+    "lines": 100
+  }
+}

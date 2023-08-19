@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "dist",
+    "target": "es2017",
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "declaration": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "paths": {
+      "@records/*": ["./src/records/*"],
+      "@contracts/*": ["./src/contracts/*"],
+      "@dtos/*": ["./src/dtos/*"],
+      "@common/*": ["./src/common/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@types": ["./src/types"]
+    }
+  },
+  "include": ["./src/**/*", "index.ts"],
+  "exclude": ["./src/**/*.spec.ts"]
+}
